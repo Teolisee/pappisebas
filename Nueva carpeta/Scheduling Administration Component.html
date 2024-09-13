@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+      window.tailwind.config = {
+        darkMode: ['class'],
+        theme: {
+          extend: {
+            colors: {
+              border: 'hsl(var(--border))',
+              input: 'hsl(var(--input))',
+              ring: 'hsl(var(--ring))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))'
+              },
+              secondary: {
+                DEFAULT: 'hsl(var(--secondary))',
+                foreground: 'hsl(var(--secondary-foreground))'
+              },
+              destructive: {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))'
+              },
+              muted: {
+                DEFAULT: 'hsl(var(--muted))',
+                foreground: 'hsl(var(--muted-foreground))'
+              },
+              accent: {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))'
+              },
+              popover: {
+                DEFAULT: 'hsl(var(--popover))',
+                foreground: 'hsl(var(--popover-foreground))'
+              },
+              card: {
+                DEFAULT: 'hsl(var(--card))',
+                foreground: 'hsl(var(--card-foreground))'
+              },
+            },
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="p-6 bg-background text-foreground">
+      <div class="flex justify-between items-center mb-8">
+        <h1 class="text-3xl font-bold text-center flex-grow">Administración de Planificación Horario</h1>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded ml-4">Duplicar</button>
+      </div>
+
+      <div class="grid grid-cols-12 gap-4 mb-6">
+        <div class="col-span-3">
+          <label class="block mb-2 text-sm font-semibold">Jornadas Tienda</label>
+          <hr class="border-t border-border mb-4" />
+          <input type="text" placeholder="Buscar..." class="border border-border p-2 rounded w-full" />
+          <ul class="mt-2">
+            <li class="border border-border p-2 mb-2 bg-gray-100 text-gray-800 text-sm">09:00-12:00 & 13:00-17:00</li>
+            <li class="border border-border p-2 mb-2 bg-gray-100 text-gray-800 text-sm">11:00-12:00 & 21:00</li>
+            <li class="border border-border p-2 mb-2 bg-gray-100 text-gray-800 text-sm">14:00-17:30</li>
+            <li class="border border-border p-2 mb-2 bg-gray-100 text-gray-800 text-sm">09:00-12:00 & 13:00-17:00</li>
+          </ul>
+          <label class="block mb-2 mt-4">Tipo</label>
+          <div class="bg-blue-500 text-white p-1 rounded mb-2 text-sm w-24">Administrativo</div>
+          <div class="bg-red-500 text-white p-1 rounded text-sm w-24">Operativo</div>
+        </div>
+
+        <div class="col-span-1"></div>
+
+        <div class="col-span-8 translate-x-30">
+          <h2 class="text-xl font-semibold mb-4">Plantillas Local KFC-045</h2>
+          <div class="flex justify-start space-x-2 mb-4">
+            <button class="bg-green-500 text-white p-2 rounded">Nuevo</button>
+            <button class="bg-blue-500 text-white p-2 rounded">Guardar</button>
+          </div>
+
+          <table class="min-w-full border border-border mt-4">
+            <thead>
+              <tr>
+                <th class="border border-border p-2">RCL</th>
+                <th class="border border-border p-2">Lunes</th>
+                <th class="border border-border p-2">Martes</th>
+                <th class="border border-border p-2">Miércoles</th>
+                <th class="border border-border p-2">Jueves</th>
+                <th class="border border-border p-2">Viernes</th>
+                <th class="border border-border p-2">Sábado</th>
+                <th class="border border-border p-2">Domingo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-border p-2">Operativo</td>
+                <td class="border border-border p-2">14:00-12:00</td>
+                <td class="border border-border p-2">07:30-12:30</td>
+                <td class="border border-border p-2"></td>
+                <td class="border border-border p-2"></td>
+                <td class="border border-border p-2"></td>
+                <td class="border border-border p-2"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <span class="text-muted-foreground">Crea una línea nueva en la tabla</span>
+        <span class="text-muted-foreground">Una vez finalizado, presiona guardar y se ven los datos</span>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
